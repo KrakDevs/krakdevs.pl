@@ -1,0 +1,17 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+<div class="row">
+    <div class="col-lg-3">
+        <div class="list-group">
+            <a href="{{ url('fos_user_change_password') }}" class="list-group-item">{{ 'security.change_password'|trans }}</a>
+
+            <a href="{{ url('fos_user_profile_edit') }}" class="list-group-item">{{ 'user.profile.edit'|trans }}</a>
+            <a href="{{ url('fos_user_security_logout') }}" class="list-group-item">{{ 'security.logout'|trans }}</a>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        {% include "FOSUserBundle:Profile:show_content.html.twig" %}
+    </div>
+</div>
+{% endblock body %}

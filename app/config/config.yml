@@ -1,6 +1,7 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+    - { resource: krakdevs.yml }
 
 framework:
     #esi:             ~
@@ -28,6 +29,9 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    form:
+        resources:
+            - ":Form:form_twitter_bootstrap_3.1.x_layout.html.twig"
 
 # Assetic Configuration
 assetic:

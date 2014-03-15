@@ -4,3 +4,15 @@ base:
   navigation:
     krakdevs: KrakDevs
     toggle: Rozwiń
+
+security:
+  password:
+    reset: Resetuj hasło
+  logout: Wyloguj
+  change_password: Zmień hasło
+  login: Logowanie
+
+user:
+  profile:
+    show: Twój profil
+    edit: Edytuj swoje dane
