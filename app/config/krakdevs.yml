@@ -2,3 +2,9 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: KrakDevs\WebBundle\Entity\User
+    from_email:
+        address:        krakdevs@gmail.com
+        sender_name:    KrakDevs
+    registration:
+        confirmation:
+            enabled: true
