@@ -13,6 +13,8 @@ security:
   login: Logowanie
 
 user:
+  registration:
+    register: Rejestracja
   profile:
     show: Twój profil
     edit: Edytuj swoje dane
