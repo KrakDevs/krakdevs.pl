@@ -1,0 +1,6 @@
+base:
+  seo:
+    title: KrakDevs
+  navigation:
+    krakdevs: KrakDevs
+    toggle: Rozwiń

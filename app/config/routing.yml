@@ -1,0 +1,3 @@
+krak_devs_web:
+    resource: "@KrakDevsWebBundle/Resources/config/routing.yml"
+    prefix:   /

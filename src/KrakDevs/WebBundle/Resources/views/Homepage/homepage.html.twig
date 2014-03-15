@@ -1,0 +1,29 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+<div class="row">
+    <div class="col-lg-9">
+        <div class="jumbotron">
+            <h1>{{ 'homepage.krakdevs'|trans }}</h1>
+            <p>{{ 'homepage.description'|trans }}</p>
+        </div>
+    </div>
+    <div class="col-lg-3">
+        <h2>{{ 'homepage.sponsors'|trans }}</h2>
+        <div class="sponsors">
+            <div class="sponsor">
+            <a href="http://www.jetbrains.com/"><img class="jetbrains" src="{{ asset('images/logo_JB_tagline.png') }}" alt="JetBrains" /></a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block stylesheets %}
+{{ parent() }}
+{% stylesheets
+'css/homepage.css'
+filter='cssrewrite' output='css/compiled/homepage.css' %}
+<link rel="stylesheet" href="{{ asset_url }}" />
+{% endstylesheets %}
+{% endblock %}

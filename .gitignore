@@ -5,6 +5,10 @@
 /app/logs/*
 !app/cache/.gitkeep
 !app/logs/.gitkeep
+/web/css/compiled/*
+!web/css/compiled/.gitkeep
+/web/js/compiled/*
+!web/js/compiled/.gitkeep
 /build/
 /vendor/
 /bin/

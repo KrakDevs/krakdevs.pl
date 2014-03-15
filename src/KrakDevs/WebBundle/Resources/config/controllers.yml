@@ -1,0 +1,6 @@
+parameters:
+  krak_devs_web.controller.homepage.class: KrakDevs\WebBundle\Controller\HomepageController
+
+services:
+  krak_devs_web.controller.homepage:
+    class: %krak_devs_web.controller.homepage.class%
