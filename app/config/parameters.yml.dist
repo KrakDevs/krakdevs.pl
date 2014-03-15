@@ -13,3 +13,5 @@ parameters:
 
     locale:            pl
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+    google_analytics_code: EDIT_ME
