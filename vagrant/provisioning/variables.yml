@@ -1,0 +1,14 @@
+---
+# Project
+project_name: krakdevs.dev
+project_root: /var/www/krakdevs
+project_web_root: "{{ project_root }}/web"
+project_databases: ['symfony', 'symfony-dev', 'symfony-tst']
+
+# Composer
+composer_download_url: https://getcomposer.org/composer.phar
+
+#MySQL
+mysql_port: 3306
+mysql_root_db_pass: ""
+

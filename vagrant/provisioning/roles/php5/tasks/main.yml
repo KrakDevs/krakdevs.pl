@@ -1,0 +1,17 @@
+---
+- name: Install PHP 
+  apt: name=php5 state=latest
+
+- name: Intsall PHP packages
+  apt: name={{ item }} state=latest
+  with_items:
+    - php-apc
+    - php5-cli
+    - php5-gd
+    - php5-mysql
+    - php5-curl
+    - php5-intl
+    - php5-mcrypt
+
+- name: Configure PHP
+  template: src=php_config.ini.j2 dest=/etc/php5/conf.d/php_config.ini

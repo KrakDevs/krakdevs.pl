@@ -1,0 +1,28 @@
+---
+
+- name: Set cache folder permissions
+  shell: >
+    APACHEUSER=`ps aux | grep -E '[a]pache|[h]ttpd|[_]www|[w]ww-data' | grep -v root | head -1 | cut -d\  -f1` &&
+    setfacl -R -m u:"$APACHEUSER":rwX -m u:`whoami`:rwX {{ project_root }}/app/cache {{ project_root }}/app/logs &&
+    setfacl -dR -m u:"$APACHEUSER":rwX -m u:`whoami`:rwX {{ project_root }}/app/cache {{ project_root }}/app/logs
+
+- name: Create apache2 configuration
+  template:
+    src: vhost-configuration.js2
+    dest: /etc/apache2/sites-available/{{ project_name }}-configuration.conf
+
+- name: Enable apache2 vhosts
+  file:
+    src: /etc/apache2/sites-available/{{ project_name }}-configuration.conf
+    dest: /etc/apache2/sites-enabled/{{ project_name }}-configuration.conf
+    state: link
+  notify: restart apache
+
+- name: Create prod database
+  mysql_db:
+    name: "{{ item }}"
+    state: present
+    collation: utf8_general_ci
+  with_items: project_databases
+
+
