@@ -2,3 +2,22 @@ homepage:
   krakdevs: KrakDevs - IT meetups
   description: Technologiczne rozmowy przy piwie.
   sponsors: Sponsorzy
+  event:
+    upcoming: Nadchodzące wydarzenie
+    location: Lokalizacja
+    previous: Poprzednie wydarzenia
+    no_upcoming_message: >
+      Jeszcze nie ustaliliśmy terminu ani tematu kolejnego wydarzenia.
+      Jeżeli chciałbyś poprowadzić kolejne spoktanie albo po prostu masz
+      ochotę posłuchać o czymś konkretnym napisz o tym na naszej grupie na Facebooku:
+
+admin:
+  event:
+    name: Wydarzenia
+    title: Tytuł
+    datetime: Data
+    location_url: Link do mapy
+    location_name: Opis lokalizacji
+    description: Opis
+    actions: Akcje
+

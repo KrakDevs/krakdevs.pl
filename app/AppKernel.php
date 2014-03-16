@@ -18,6 +18,17 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new KrakDevs\WebBundle\KrakDevsWebBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+
+            new FSi\Bundle\FormExtensionsBundle\FSiFormExtensionsBundle(),
+
+            // Bundles required by FSiAdminBundle
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new FSi\Bundle\DataSourceBundle\DataSourceBundle(),
+            new FSi\Bundle\DataGridBundle\DataGridBundle(),
+            new FSi\Bundle\AdminBundle\FSiAdminBundle(),
+
+            // FSiAdminSecureBundle
+            new FSi\Bundle\AdminSecurityBundle\FSiAdminSecurityBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

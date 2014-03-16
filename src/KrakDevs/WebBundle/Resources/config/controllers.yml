@@ -4,3 +4,5 @@ parameters:
 services:
   krak_devs_web.controller.homepage:
     class: %krak_devs_web.controller.homepage.class%
+    arguments:
+      - @krak_devs_web.repository.event

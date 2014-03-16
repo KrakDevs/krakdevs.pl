@@ -1,0 +1,8 @@
+parameters:
+  krak_devs_web.admin.event.class: "KrakDevs\WebBundle\Admin\Event"
+
+services:
+  krak_devs_web.admin.event:
+    class: %krak_devs_web.admin.event.class%
+    tags:
+      - { name: admin.element }

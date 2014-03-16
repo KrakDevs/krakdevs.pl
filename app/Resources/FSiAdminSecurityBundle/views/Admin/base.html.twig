@@ -1,0 +1,13 @@
+{% extends 'FSiAdminBundle::base.html.twig' %}
+
+{% block navigation %}
+{{ parent() }}
+<ul class="nav navbar-nav navbar-right">
+    <li id="account" class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ 'admin.welcome'|trans({'%username%' : app.user.username}, 'FSiAdminSecurity')|raw }} <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li><a href="{{ url('fos_user_security_logout') }}">{{ 'admin.logout'|trans({}, 'FSiAdminSecurity') }}</a></li>
+        </ul>
+    </li>
+</ul>
+{% endblock %}

@@ -51,9 +51,17 @@
                     </ul>
                 </div>
                 {% endif %}
+                {% if is_granted('ROLE_ADMIN') %}
+                    <ul class="nav navbar-nav navbar-right">
+                        <ul class="nav navbar-nav">
+                            <li><a href="{{ url('fsi_admin') }}">{{ 'base.admin'|trans }}</a></li>
+                        </ul>
+                    </ul>
+                {% endif %}
             </div>
         </div>
     {% block body %}{% endblock %}
+    <div id="footer"></div>
     </div>
     {% block javascripts %}
         <script type="text/javascript">

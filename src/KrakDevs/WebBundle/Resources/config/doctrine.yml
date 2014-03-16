@@ -1,0 +1,11 @@
+parameters:
+  krak_devs_web.repository.event.class: KrakDevs\WebBundle\Doctrine\Repository\Event
+  krak_devs_web.entity.event.class: KrakDevs\WebBundle\Entity\Event
+
+services:
+  krak_devs_web.repository.event:
+    class: %krak_devs_web.repository.event.class%
+    factory_service: doctrine.orm.entity_manager
+    factory_method: getRepository
+    arguments:
+      - %krak_devs_web.entity.event.class%

@@ -1,0 +1,23 @@
+columns:
+  title:
+    type: text
+    options:
+      editable : true
+      label: admin.event.title
+
+  date:
+    type: datetime
+    options:
+      label: admin.event.datetime
+
+  actions:
+    type: action
+    options:
+      label: admin.event.actions
+      field_mapping: [ id ]
+      actions:
+        edit:
+          route_name: "fsi_admin_crud_edit"
+          additional_parameters: { element: event }
+          parameters_field_mapping: { id: id }
+

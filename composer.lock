@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "7099e8564c54d24e4bf6b34a4f9471c7",
+    "hash": "5a15e7a250ab190dae1fe4c52cec6024",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -693,6 +693,548 @@
             "time": "2013-09-23 08:24:12"
         },
         {
+            "name": "fsi/admin-bundle",
+            "version": "v1.0.7",
+            "target-dir": "FSi/Bundle/AdminBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fsi-open/admin-bundle.git",
+                "reference": "867c977764da1ab5b5a5f476e5dda1fb5dabd2f8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fsi-open/admin-bundle/zipball/867c977764da1ab5b5a5f476e5dda1fb5dabd2f8",
+                "reference": "867c977764da1ab5b5a5f476e5dda1fb5dabd2f8",
+                "shasum": ""
+            },
+            "require": {
+                "fsi/data-indexer": "0.9.*",
+                "fsi/datagrid-bundle": "1.0.*",
+                "fsi/datasource-bundle": "1.2.*",
+                "knplabs/knp-menu-bundle": "1.1.*",
+                "php": ">=5.3.3",
+                "sensio/framework-extra-bundle": "~2.3",
+                "symfony/form": "~2.3",
+                "symfony/framework-bundle": "~2.3",
+                "symfony/options-resolver": "~2.3",
+                "symfony/twig-bundle": "~2.3",
+                "twig/twig": "~1.2"
+            },
+            "require-dev": {
+                "behat/behat": "*@stable",
+                "behat/mink-browserkit-driver": "*",
+                "behat/mink-extension": "*",
+                "behat/mink-selenium2-driver": "*",
+                "behat/symfony2-extension": "*@stable",
+                "bossa/phpspec2-expect": "dev-master",
+                "doctrine/doctrine-bundle": "dev-master",
+                "doctrine/doctrine-cache-bundle": "dev-master",
+                "ext-pdo_sqlite": "*",
+                "fsi/resource-repository-bundle": "1.0.*",
+                "fzaninotto/faker": "1.2.*",
+                "phpspec/phpspec": "2.0.*@dev",
+                "sensiolabs/behat-page-object-extension": "1.0.*@dev",
+                "symfony/class-loader": "~2.3"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "FSi\\Bundle\\AdminBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Norbert Orzechowicz",
+                    "email": "norbert@orzechowicz.pl"
+                }
+            ],
+            "description": "FSi Admin Bundle. Admin generator for Symfony2.",
+            "keywords": [
+                "Symfony2",
+                "admin",
+                "bundle",
+                "fsi",
+                "panel"
+            ],
+            "time": "2014-03-06 09:42:36"
+        },
+        {
+            "name": "fsi/admin-security-bundle",
+            "version": "dev-master",
+            "target-dir": "FSi/Bundle/AdminSecurityBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fsi-open/admin-security-bundle.git",
+                "reference": "e73bbf52c70aa629de5cce6be5af81f78ec7b4f5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fsi-open/admin-security-bundle/zipball/e73bbf52c70aa629de5cce6be5af81f78ec7b4f5",
+                "reference": "e73bbf52c70aa629de5cce6be5af81f78ec7b4f5",
+                "shasum": ""
+            },
+            "require": {
+                "fsi/admin-bundle": "1.0.*",
+                "php": ">=5.3.3",
+                "symfony/framework-bundle": "~2.3",
+                "symfony/security-bundle": "~2.3",
+                "symfony/swiftmailer-bundle": "~2.3",
+                "symfony/validator": "~2.3"
+            },
+            "require-dev": {
+                "behat/behat": "2.4.*",
+                "behat/mink-browserkit-driver": "*",
+                "behat/mink-extension": "*",
+                "behat/symfony2-extension": "*@stable",
+                "bossa/phpspec2-expect": "dev-master",
+                "doctrine/doctrine-bundle": "dev-master",
+                "doctrine/doctrine-cache-bundle": "dev-master",
+                "friendsofsymfony/user-bundle": "1.3.*",
+                "phpspec/phpspec": "2.0.*@dev",
+                "sensiolabs/behat-page-object-extension": "1.0.*@dev",
+                "symfony/expression-language": "~2.4"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "FSi\\Bundle\\AdminSecurityBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Norbert Orzechowicz",
+                    "email": "norbert@orzechowicz.pl"
+                }
+            ],
+            "description": "Purpose of this bundle is to provide simple authentication & authorization mechanisms for fsi/admin-bundle",
+            "keywords": [
+                "Symfony2",
+                "admin",
+                "bundle",
+                "fsi",
+                "panel"
+            ],
+            "time": "2014-03-07 09:25:50"
+        },
+        {
+            "name": "fsi/data-indexer",
+            "version": "0.9.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fsi-open/data-indexer.git",
+                "reference": "050ecdba396c277b9671dfaca0f86c01e073e252"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fsi-open/data-indexer/zipball/050ecdba396c277b9671dfaca0f86c01e073e252",
+                "reference": "050ecdba396c277b9671dfaca0f86c01e073e252",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "~2.2",
+                "doctrine/orm": "~2.2",
+                "php": ">=5.3.0",
+                "symfony/property-access": "~2.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "FSi\\Component\\DataIndexer": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Norbert Orzechowicz",
+                    "email": "norbert@fsi.pl"
+                }
+            ],
+            "description": "FSi DataIndexer Component - Component created to provide one simple object indexing strategy for FSi DataSource and DataGrid components.",
+            "keywords": [
+                "component",
+                "datagrid",
+                "fsi"
+            ],
+            "time": "2013-07-25 08:26:12"
+        },
+        {
+            "name": "fsi/datagrid",
+            "version": "v1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fsi-open/datagrid.git",
+                "reference": "f8468717dc562020de2382c8a9dc884f2111808b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fsi-open/datagrid/zipball/f8468717dc562020de2382c8a9dc884f2111808b",
+                "reference": "f8468717dc562020de2382c8a9dc884f2111808b",
+                "shasum": ""
+            },
+            "require": {
+                "fsi/data-indexer": "0.9.*",
+                "fsi/reflection": "0.9.*",
+                "php": ">=5.3.0",
+                "symfony/event-dispatcher": "~2.2",
+                "symfony/options-resolver": "~2.2",
+                "symfony/property-access": "~2.2"
+            },
+            "require-dev": {
+                "doctrine/common": "~2.2,>=2.2.3",
+                "doctrine/orm": "~2.2,>=2.2.3",
+                "gedmo/doctrine-extensions": "2.3.*",
+                "symfony/dependency-injection": "~2.2",
+                "symfony/form": "~2.2",
+                "symfony/http-foundation": "~2.2",
+                "symfony/routing": "~2.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "FSi\\Component\\DataGrid": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Norbert Orzechowicz",
+                    "email": "norbert@fsi.pl"
+                }
+            ],
+            "description": "FSi DataGrid Component",
+            "keywords": [
+                "component",
+                "datagrid",
+                "fsi"
+            ],
+            "time": "2013-11-30 18:45:21"
+        },
+        {
+            "name": "fsi/datagrid-bundle",
+            "version": "v1.0.8",
+            "target-dir": "FSi/Bundle/DataGridBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fsi-open/datagrid-bundle.git",
+                "reference": "e286e0e2df86a363f1c40550e65320da4093715c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fsi-open/datagrid-bundle/zipball/e286e0e2df86a363f1c40550e65320da4093715c",
+                "reference": "e286e0e2df86a363f1c40550e65320da4093715c",
+                "shasum": ""
+            },
+            "require": {
+                "fsi/datagrid": "1.0.*",
+                "php": ">=5.3.3",
+                "symfony/framework-bundle": "~2.2",
+                "twig/twig": "~1.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*",
+                "symfony/form": "2.2.*",
+                "symfony/twig-bridge": "2.2.*"
+            },
+            "suggest": {
+                "phpoffice/phpexcel": "Allows export data to xls format."
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "FSi\\Bundle\\DataGridBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Norbert Orzechowicz",
+                    "email": "norbert@fsi.pl"
+                }
+            ],
+            "description": "FSi Datagrid Bundle",
+            "keywords": [
+                "bundle",
+                "datagrid",
+                "datagrid-bundle",
+                "fsi",
+                "symfony"
+            ],
+            "time": "2014-02-01 14:35:06"
+        },
+        {
+            "name": "fsi/datasource",
+            "version": "v1.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fsi-open/datasource.git",
+                "reference": "6b841ff8dcb1b94fafe2a333dc0d1fdb8bc150dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fsi-open/datasource/zipball/6b841ff8dcb1b94fafe2a333dc0d1fdb8bc150dd",
+                "reference": "6b841ff8dcb1b94fafe2a333dc0d1fdb8bc150dd",
+                "shasum": ""
+            },
+            "require": {
+                "fsi/data-indexer": "0.9.*",
+                "php": ">=5.3.0",
+                "symfony/event-dispatcher": "~2.2",
+                "symfony/options-resolver": "~2.2"
+            },
+            "require-dev": {
+                "doctrine/common": "~2.3",
+                "doctrine/orm": "~2.3",
+                "phpunit/phpunit": "3.7.*",
+                "symfony/doctrine-bridge": "~2.2",
+                "symfony/form": "~2.2",
+                "symfony/http-foundation": "~2.2",
+                "symfony/property-access": "~2.2",
+                "symfony/security-csrf": "~2.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "FSi\\Component\\DataSource": "lib/",
+                    "FSi\\Component\\DataSource\\Tests": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lukasz Cybula",
+                    "email": "lukasz@fsi.pl"
+                },
+                {
+                    "name": "Szczepan Cieslik",
+                    "email": "szczepan@fsi.pl"
+                }
+            ],
+            "description": "FSi DataSource Component",
+            "keywords": [
+                "component",
+                "datasource",
+                "fsi"
+            ],
+            "time": "2014-02-16 20:09:30"
+        },
+        {
+            "name": "fsi/datasource-bundle",
+            "version": "v1.2.2",
+            "target-dir": "FSi/Bundle/DataSourceBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fsi-open/datasource-bundle.git",
+                "reference": "bf2f1ba54e7b42f9e4b8eaa0de7efe75a9333069"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fsi-open/datasource-bundle/zipball/bf2f1ba54e7b42f9e4b8eaa0de7efe75a9333069",
+                "reference": "bf2f1ba54e7b42f9e4b8eaa0de7efe75a9333069",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/collections": "~1.0",
+                "doctrine/orm": "~2.3",
+                "fsi/datasource": "1.2.*",
+                "php": ">=5.3.3",
+                "symfony/framework-bundle": "~2.2",
+                "symfony/yaml": "~2.2",
+                "twig/twig": "~1.2"
+            },
+            "require-dev": {
+                "symfony/form": "~2.2",
+                "symfony/twig-bridge": "~2.2"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "FSi\\Bundle\\DataSourceBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lukasz Cybula",
+                    "email": "lukasz@fsi.pl"
+                }
+            ],
+            "description": "FSi DataSource Bundle",
+            "keywords": [
+                "bundle",
+                "datasource",
+                "datasource-bundle",
+                "fsi",
+                "symfony"
+            ],
+            "time": "2014-01-09 15:29:59"
+        },
+        {
+            "name": "fsi/form-extensions-bundle",
+            "version": "v1.0.2",
+            "target-dir": "FSi/Bundle/FormExtensionsBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fsi-open/form-extensions-bundle.git",
+                "reference": "e594bc9c78a0d0ebd2af53ab111b7c09a7c65670"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fsi-open/form-extensions-bundle/zipball/e594bc9c78a0d0ebd2af53ab111b7c09a7c65670",
+                "reference": "e594bc9c78a0d0ebd2af53ab111b7c09a7c65670",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/form": "~2.3",
+                "symfony/framework-bundle": "~2.3",
+                "symfony/twig-bundle": "~2.3",
+                "symfony/validator": "~2.3",
+                "twig/twig": "~1.2"
+            },
+            "require-dev": {
+                "behat/behat": "*@stable",
+                "behat/mink-browserkit-driver": "*",
+                "behat/mink-extension": "*",
+                "behat/mink-selenium2-driver": "*",
+                "behat/symfony2-extension": "*@stable",
+                "bossa/phpspec2-expect": "dev-master",
+                "phpspec/phpspec": "2.0.*@dev",
+                "sensiolabs/behat-page-object-extension": "1.0.*@dev",
+                "symfony/class-loader": "2.3.*"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "FSi\\Bundle\\FormExtensionsBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Norbert Orzechowicz",
+                    "email": "norbert@fsi.pl"
+                }
+            ],
+            "description": "FSi extensions for Symfony2 form component.",
+            "keywords": [
+                "CKEditor",
+                "bundle",
+                "extensions",
+                "form",
+                "fsi",
+                "symfony"
+            ],
+            "time": "2014-01-02 09:26:36"
+        },
+        {
+            "name": "fsi/reflection",
+            "version": "0.9.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fsi-open/reflection.git",
+                "reference": "78bb5b2d919cdc5665671b29c881f732648c6b87"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fsi-open/reflection/zipball/78bb5b2d919cdc5665671b29c881f732648c6b87",
+                "reference": "78bb5b2d919cdc5665671b29c881f732648c6b87",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "FSi\\Component\\Reflection": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Norbert Orzechowicz",
+                    "email": "norbert@fsi.pl"
+                },
+                {
+                    "name": "Lukasz Cybula",
+                    "email": "lukasz@fsi.pl"
+                }
+            ],
+            "description": "FSi Reflection Component is an extension of built-in reflection classes in PHP 5.3 that saves a lot memory, thanks to factory design pattern.",
+            "keywords": [
+                "component",
+                "fsi",
+                "reflection"
+            ],
+            "time": "2012-10-03 08:02:37"
+        },
+        {
             "name": "incenteev/composer-parameter-handler",
             "version": "v2.1.0",
             "target-dir": "Incenteev/ParameterHandler",
@@ -793,6 +1335,119 @@
                 "sql"
             ],
             "time": "2014-01-12 16:20:24"
+        },
+        {
+            "name": "knplabs/knp-menu",
+            "version": "v1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/KnpMenu.git",
+                "reference": "f8e867268f63f561c1adadd6cbb5d8524f921873"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMenu/zipball/f8e867268f63f561c1adadd6cbb5d8524f921873",
+                "reference": "f8e867268f63f561c1adadd6cbb5d8524f921873",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "pimple/pimple": "*",
+                "silex/silex": "1.0.*",
+                "twig/twig": ">=1.2,<2.0-dev"
+            },
+            "suggest": {
+                "pimple/pimple": "for the built-in implementations of the menu provider and renderer provider",
+                "silex/silex": "for the integration with your silex application",
+                "twig/twig": "for the TwigRenderer and the integration with your templates"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Knp\\Menu\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christophe Coevoet",
+                    "email": "stof@notk.org"
+                },
+                {
+                    "name": "KnpLabs",
+                    "homepage": "http://knplabs.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://github.com/KnpLabs/KnpMenu/contributors"
+                }
+            ],
+            "description": "An object oriented menu library",
+            "homepage": "http://knplabs.com",
+            "keywords": [
+                "menu",
+                "tree"
+            ],
+            "time": "2012-06-10 16:20:40"
+        },
+        {
+            "name": "knplabs/knp-menu-bundle",
+            "version": "v1.1.2",
+            "target-dir": "Knp/Bundle/MenuBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/KnpMenuBundle.git",
+                "reference": "2fecac02614e5a006f674dd5dd754eeaeca060b9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/2fecac02614e5a006f674dd5dd754eeaeca060b9",
+                "reference": "2fecac02614e5a006f674dd5dd754eeaeca060b9",
+                "shasum": ""
+            },
+            "require": {
+                "knplabs/knp-menu": "~1.1",
+                "symfony/framework-bundle": "~2.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Knp\\Bundle\\MenuBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christophe Coevoet",
+                    "email": "stof@notk.org"
+                },
+                {
+                    "name": "Knplabs",
+                    "homepage": "http://knplabs.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://github.com/KnpLabs/KnpMenuBundle/contributors"
+                }
+            ],
+            "description": "This bundle provides an integration of the KnpMenu library",
+            "keywords": [
+                "menu"
+            ],
+            "time": "2013-05-25 10:20:03"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -1627,9 +2282,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "fsi/admin-security-bundle": 20
+    },
     "platform": {
         "php": ">=5.3.3"
     },

@@ -1,4 +1,5 @@
 base:
+  admin: Panel administracyjny
   seo:
     title: KrakDevs
   navigation:

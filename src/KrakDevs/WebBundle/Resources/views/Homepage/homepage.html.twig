@@ -17,6 +17,37 @@
         </div>
     </div>
 </div>
+<div class="row">
+    <div class="col-lg-5">
+        <h1>{{ 'homepage.event.upcoming'|trans }}</h1>
+        <hr />
+        {% if upcomingEvent is not null %}
+            <div class="event">
+                <h3 class="media-heading">{{ upcomingEvent.title }}</h3>
+                <div>{{ upcomingEvent.date|date("Y-m-d H:i:s") }}</div>
+                <div>{{ 'homepage.event.location'|trans }} <a target="_blank" href="{{ upcomingEvent.locationUrl }}">{{ upcomingEvent.locationName }}</a> </div>
+                <div class="description">
+                    {{ upcomingEvent.description|raw }}
+                </div>
+            </div>
+        {% else %}
+            <p>
+                {{ 'homepage.event.no_upcoming_message'|trans }}
+            </p>
+            <a href="https://www.facebook.com/groups/krakdevs/" target="_blank">https://www.facebook.com/groups/krakdevs/</a>
+        {% endif %}
+    </div>
+    <div class="col-lg-5 col-lg-offset-2">
+        <h1>{{ 'homepage.event.previous'|trans }}</h1>
+        <hr />
+        {% for event in previousEvents %}
+            <div class="event">
+                <h3 class="media-heading">{{ event.title }}</h3>
+                <div>{{ event.date|date("Y-m-d H:i:s") }}</div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}
 
 {% block stylesheets %}
