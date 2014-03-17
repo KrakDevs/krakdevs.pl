@@ -48,6 +48,13 @@ class Event
     protected $locationName;
 
     /**
+     * @var User
+     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\JoinColumn(name="event_master_id", referencedColumnName="id", nullable=true)
+     */
+    private $eventMaster;
+
+    /**
      * @param \DateTime $date
      */
     public function setDate(\DateTime $date)
@@ -133,5 +140,21 @@ class Event
     public function getTitle()
     {
         return $this->title;
+    }
+
+    /**
+     * @param User $eventMaster
+     */
+    public function setEventMaster(User $eventMaster)
+    {
+        $this->eventMaster = $eventMaster;
+    }
+
+    /**
+     * @return User
+     */
+    public function getEventMaster()
+    {
+        return $this->eventMaster;
     }
 }

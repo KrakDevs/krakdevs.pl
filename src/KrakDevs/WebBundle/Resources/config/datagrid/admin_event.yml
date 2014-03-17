@@ -10,6 +10,14 @@ columns:
     options:
       label: admin.event.datetime
 
+  eventMaster:
+    type: entity
+    options:
+      relation_field: eventMaster
+      field_mapping: ['username', 'email']
+      value_format: "%s (%s)"
+      label: admin.event.event_master
+
   actions:
     type: action
     options:

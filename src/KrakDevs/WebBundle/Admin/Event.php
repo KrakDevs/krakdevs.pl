@@ -55,6 +55,12 @@ class Event extends CRUDElement
             'time_widget' => 'choice',
             'empty_data' => new \DateTime(date("Y-m-d 19:00"))
         ));
+        $form->add('eventMaster', 'entity', array(
+            'class' => 'KrakDevs\WebBundle\Entity\User',
+            'label' => 'admin.event.event_master',
+            'empty_value' => 'admin.event.choose_event_master'
+        ));
+
         $form->add('locationName', 'text', array('label' => 'admin.event.location_name'));
         $form->add('locationUrl', 'url', array('label' => 'admin.event.location_url'));
         $form->add('description', 'fsi_ckeditor', array('label' => 'admin.event.description'));
