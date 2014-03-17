@@ -22,7 +22,6 @@ class HomepageController
     }
 
     /**
-     * @Route("/")
      * @Template("KrakDevsWebBundle:Homepage:homepage.html.twig")
      */
     public function displayAction()
@@ -30,6 +29,16 @@ class HomepageController
         return array(
             'upcomingEvent' => $this->eventRepository->getUpcomingEvent(),
             'previousEvents' => $this->eventRepository->getPreviousEvents()
+        );
+    }
+
+    /**
+     * @Template("KrakDevsWebBundle:Homepage:event.html.twig")
+     */
+    public function eventAction($slug)
+    {
+        return array(
+            'event' => $this->eventRepository->getEventBySlug($slug)
         );
     }
 }

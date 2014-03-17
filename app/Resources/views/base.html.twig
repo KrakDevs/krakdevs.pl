@@ -9,6 +9,8 @@
             <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
             {% stylesheets
             'css/style.css'
+            'css/lightbox.css'
+            'css/jcarousel.responsive.css'
             filter='cssrewrite' output='css/compiled/style.css' %}
             <link rel="stylesheet" href="{{ asset_url }}" />
             {% endstylesheets %}
@@ -80,6 +82,8 @@
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
         {% javascripts
             'js/script.js'
+            'js/lightbox-2.6.min.js'
+            'js/jquery.jcarousel.min.js'
         output="js/compiled/script.js" %}
         <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}

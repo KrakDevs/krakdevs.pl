@@ -2,6 +2,7 @@
 
 namespace KrakDevs\WebBundle\Admin;
 
+use Doctrine\ORM\EntityRepository;
 use FSi\Bundle\AdminBundle\Doctrine\Admin\CRUDElement;
 use FSi\Component\DataGrid\DataGridFactoryInterface;
 use FSi\Component\DataSource\DataSourceFactoryInterface;
@@ -64,6 +65,19 @@ class Event extends CRUDElement
         $form->add('locationName', 'text', array('label' => 'admin.event.location_name'));
         $form->add('locationUrl', 'url', array('label' => 'admin.event.location_url'));
         $form->add('description', 'fsi_ckeditor', array('label' => 'admin.event.description'));
+        $form->add('slug', 'text', array('label' => 'admin.event.slug'));
+
+        $form->add('gallery', 'entity', array(
+            'required' => false,
+            'label' => 'admin.event.gallery',
+            'class' => 'KrakDevs\WebBundle\Entity\Gallery',
+            'query_builder' => function(EntityRepository $er) {
+                    return $er->createQueryBuilder('g')
+                        ->andWhere('g.visible = 1');
+                },
+            'property' => 'name',
+            'empty_value' => '---'
+        ));
 
         return $form;
     }
