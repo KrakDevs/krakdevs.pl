@@ -32,4 +32,13 @@ class Event extends EntityRepository
 
         return $qb->getQuery()->getResult();
     }
+
+    public function getEventBySlug($slug)
+    {
+        $qb = $this->createQueryBuilder('e');
+        $qb->where('e.slug = \''.$slug.'\'');
+        $qb->setMaxResults(1);
+
+        return $qb->getQuery()->getOneOrNullResult();
+    }
 }

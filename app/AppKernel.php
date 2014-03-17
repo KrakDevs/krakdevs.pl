@@ -28,7 +28,17 @@ class AppKernel extends Kernel
             new FSi\Bundle\AdminBundle\FSiAdminBundle(),
 
             // FSiAdminSecureBundle
-            new FSi\Bundle\AdminSecurityBundle\FSiAdminSecurityBundle()
+            new FSi\Bundle\AdminSecurityBundle\FSiAdminSecurityBundle(),
+
+            // Bundles required by FSiGalleryBundle
+            new Liip\ImagineBundle\LiipImagineBundle(),
+            new Knp\Bundle\GaufretteBundle\KnpGaufretteBundle(),
+            new FSi\Bundle\DoctrineExtensionsBundle\FSiDoctrineExtensionsBundle(),
+            new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
+
+            // FSiGalleryBundle
+            new FSi\Bundle\GalleryBundle\FSiGalleryBundle(),
+            new FSi\Bundle\AdminGalleryBundle\FSiAdminGalleryBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

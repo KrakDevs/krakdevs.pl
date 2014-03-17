@@ -55,6 +55,18 @@ class Event
     private $eventMaster;
 
     /**
+     * @var string
+     * @ORM\Column(name="slug", type="string")
+     */
+    protected $slug;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Gallery")
+     * @ORM\JoinColumn(name="gallery_id", referencedColumnName="id", nullable=true)
+     */
+    protected $gallery;
+
+    /**
      * @param \DateTime $date
      */
     public function setDate(\DateTime $date)
@@ -156,5 +168,45 @@ class Event
     public function getEventMaster()
     {
         return $this->eventMaster;
+    }
+
+    /**
+     * @param string $slug
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+
+    /**
+     * Set gallery
+     *
+     * @param \KrakDevs\WebBundle\Entity\Gallery $gallery
+     * @return Event
+     */
+    public function setGallery(\KrakDevs\WebBundle\Entity\Gallery $gallery = null)
+    {
+        $this->gallery = $gallery;
+
+        return $this;
+    }
+
+    /**
+     * Get gallery
+     *
+     * @return \KrakDevs\WebBundle\Entity\Gallery 
+     */
+    public function getGallery()
+    {
+        return $this->gallery;
     }
 }
