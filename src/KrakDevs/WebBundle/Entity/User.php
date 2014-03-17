@@ -37,5 +37,4 @@ class User extends BaseUser
     {
         return sprintf("%s (%s)", $this->username, $this->email);
     }
-    
 }
