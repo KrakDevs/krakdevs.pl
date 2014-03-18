@@ -183,7 +183,6 @@ class Event
      * Set gallery
      *
      * @param \KrakDevs\WebBundle\Entity\Gallery $gallery
-     * @return Event
      */
     public function setGallery(Gallery $gallery = null)
     {
