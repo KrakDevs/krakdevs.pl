@@ -18,3 +18,9 @@ fsi_gallery:
     db_driver: orm
     gallery_class: KrakDevs\WebBundle\Entity\Gallery
     photo_class: KrakDevs\WebBundle\Entity\Photo
+
+stof_doctrine_extensions:
+    default_locale: en
+    orm:
+        default:
+            sluggable: true

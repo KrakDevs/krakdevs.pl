@@ -26,7 +26,8 @@
         "fsi/admin-gallery-bundle": "1.0.*@dev",
         "liip/imagine-bundle": "1.0.*@dev",
         "doctrine/doctrine-cache-bundle": "dev-master",
-        "gedmo/doctrine-extensions":      "dev-master"
+        "gedmo/doctrine-extensions":      "dev-master",
+        "stof/doctrine-extensions-bundle": "~1.1@dev"
     },
     "scripts": {
         "post-install-cmd": [
