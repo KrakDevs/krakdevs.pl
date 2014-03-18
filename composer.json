@@ -27,7 +27,9 @@
         "liip/imagine-bundle": "1.0.*@dev",
         "doctrine/doctrine-cache-bundle": "dev-master",
         "gedmo/doctrine-extensions":      "dev-master",
-        "stof/doctrine-extensions-bundle": "~1.1@dev"
+        "stof/doctrine-extensions-bundle": "~1.1@dev",
+        "doctrine/migrations": "dev-master",
+        "doctrine/doctrine-migrations-bundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [

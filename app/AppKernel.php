@@ -41,6 +41,7 @@ class AppKernel extends Kernel
             new FSi\Bundle\AdminGalleryBundle\FSiAdminGalleryBundle(),
 
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+            new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

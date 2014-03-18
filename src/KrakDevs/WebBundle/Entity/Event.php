@@ -172,6 +172,14 @@ class Event
     }
 
     /**
+     * @param $slug
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+    }
+
+    /**
      * @return mixed
      */
     public function getSlug()
