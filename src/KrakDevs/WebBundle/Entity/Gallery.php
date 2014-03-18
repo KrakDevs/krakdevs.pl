@@ -8,6 +8,14 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity
+ * @ORM\AttributeOverrides({
+ *      @ORM\AttributeOverride(name="description",
+ *          column=@ORM\Column(
+ *              type     = "text",
+ *              nullable = true
+ *          )
+ *      )
+ * })
  * @ORM\Table(name="gallery")
  */
 class Gallery extends BaseGallery
