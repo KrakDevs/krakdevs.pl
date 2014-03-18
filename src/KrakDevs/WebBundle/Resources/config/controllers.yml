@@ -1,8 +1,13 @@
 parameters:
   krak_devs_web.controller.homepage.class: KrakDevs\WebBundle\Controller\HomepageController
+  krak_devs_web.controller.event.class: KrakDevs\WebBundle\Controller\EventController
 
 services:
   krak_devs_web.controller.homepage:
     class: %krak_devs_web.controller.homepage.class%
+    arguments:
+      - @krak_devs_web.repository.event
+  krak_devs_web.controller.event:
+    class: %krak_devs_web.controller.event.class%
     arguments:
       - @krak_devs_web.repository.event

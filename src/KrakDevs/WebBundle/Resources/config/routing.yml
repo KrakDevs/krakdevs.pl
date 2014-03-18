@@ -1,3 +1,7 @@
 krakdevs_homepage:
     path: /
     defaults: { _controller: krak_devs_web.controller.homepage:displayAction }
+
+krakdevs_event:
+    path:      /event/{slug}
+    defaults:  { _controller: krak_devs_web.controller.event:displayAction }

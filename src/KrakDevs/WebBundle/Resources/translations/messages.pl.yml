@@ -11,6 +11,7 @@ homepage:
       Jeszcze nie ustaliliśmy terminu ani tematu kolejnego wydarzenia.
       Jeżeli chciałbyś poprowadzić kolejne spoktanie albo po prostu masz
       ochotę posłuchać o czymś konkretnym napisz o tym na naszej grupie na Facebooku:
+    read_more: Czytaj więcej
 
 admin:
   event:
@@ -23,4 +24,5 @@ admin:
     location_name: Opis lokalizacji
     description: Opis
     actions: Akcje
+    gallery: Wybierz galerię
 

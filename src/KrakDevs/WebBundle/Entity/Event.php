@@ -2,6 +2,7 @@
 
 namespace KrakDevs\WebBundle\Entity;
 
+use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -53,6 +54,18 @@ class Event
      * @ORM\JoinColumn(name="event_master_id", referencedColumnName="id", nullable=true)
      */
     private $eventMaster;
+
+    /**
+     * @Gedmo\Slug(fields={"title", "id"})
+     * @ORM\Column(length=128, unique=true)
+     */
+    protected $slug;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Gallery")
+     * @ORM\JoinColumn(name="gallery_id", referencedColumnName="id", nullable=true)
+     */
+    protected $gallery;
 
     /**
      * @param \DateTime $date
@@ -156,5 +169,33 @@ class Event
     public function getEventMaster()
     {
         return $this->eventMaster;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * Set gallery
+     *
+     * @param \KrakDevs\WebBundle\Entity\Gallery $gallery
+     */
+    public function setGallery(Gallery $gallery = null)
+    {
+        $this->gallery = $gallery;
+    }
+
+    /**
+     * Get gallery
+     *
+     * @return \KrakDevs\WebBundle\Entity\Gallery
+     */
+    public function getGallery()
+    {
+        return $this->gallery;
     }
 }
