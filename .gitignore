@@ -9,6 +9,8 @@
 !web/css/compiled/.gitkeep
 /web/js/compiled/*
 !web/js/compiled/.gitkeep
+/web/uploaded/*
+!web/uploaded/.gitkeep
 /build/
 /vendor/
 /bin/
