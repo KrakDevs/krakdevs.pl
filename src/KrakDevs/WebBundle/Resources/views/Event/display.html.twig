@@ -1,0 +1,65 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="event">
+                <h3 class="media-heading">{{ event.title }}</h3>
+                <div>{{ event.date|date("Y-m-d H:i:s") }}</div>
+                <div>{{ 'homepage.event.event_master'|trans }} {{ event.eventMaster.username }}</div>
+                <div class="description">
+                    {{ event.description|raw }}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% if event.gallery is not null %}
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="gallery">
+                    <div class="jcarousel-wrapper">
+                        <div class="jcarousel">
+                            <ul>
+                                {% for photo in event.gallery.photos %}
+                                    {% spaceless %}
+                                        <li>
+                                            <a href="{{ fsi_file_path(photo.photo, 'uploaded') }}" target="_blank" data-lightbox="roadtrip">
+                                                <img class="thumbnail" src="{{ fsi_file_path(photo.photo, 'uploaded') }}"/>
+                                            </a>
+                                        </li>
+                                    {% endspaceless %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                        <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+
+                        <p class="jcarousel-pagination"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets
+    'css/homepage.css'
+    'css/jcarousel.responsive.css'
+    'css/lightbox.css'
+    filter='cssrewrite' output='css/compiled/homepage.css' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {% javascripts
+    'js/script.js'
+    'js/lightbox-2.6.min.js'
+    'js/jquery.jcarousel.min.js'
+    output="js/compiled/script.js" %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}

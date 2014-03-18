@@ -8,3 +8,13 @@ fos_user:
     registration:
         confirmation:
             enabled: true
+
+fsi_doctrine_extensions:
+    orm:
+        default:
+            uploadable: true
+
+fsi_gallery:
+    db_driver: orm
+    gallery_class: KrakDevs\WebBundle\Entity\Gallery
+    photo_class: KrakDevs\WebBundle\Entity\Photo

@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "5a15e7a250ab190dae1fe4c52cec6024",
+    "hash": "0baafd488dff65fb931f3d11566ed20f",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -362,30 +362,36 @@
         },
         {
             "name": "doctrine/doctrine-bundle",
-            "version": "v1.2.0",
+            "version": "dev-master",
             "target-dir": "Doctrine/Bundle/DoctrineBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineBundle.git",
-                "reference": "765b0d87fcc3e839c74817b7211258cbef3a4fb9"
+                "reference": "326bc9422817a0c3abe4551fd3b816a066947630"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/765b0d87fcc3e839c74817b7211258cbef3a4fb9",
-                "reference": "765b0d87fcc3e839c74817b7211258cbef3a4fb9",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/326bc9422817a0c3abe4551fd3b816a066947630",
+                "reference": "326bc9422817a0c3abe4551fd3b816a066947630",
                 "shasum": ""
             },
             "require": {
-                "doctrine/dbal": ">=2.2,<2.5-dev",
+                "doctrine/dbal": "~2.3",
+                "doctrine/doctrine-cache-bundle": "~1.0",
                 "jdorn/sql-formatter": "~1.1",
                 "php": ">=5.3.2",
                 "symfony/doctrine-bridge": "~2.2",
                 "symfony/framework-bundle": "~2.2"
             },
             "require-dev": {
-                "doctrine/orm": ">=2.2,<2.5-dev",
+                "doctrine/orm": "~2.3",
+                "phpunit/php-code-coverage": "~1.2",
+                "phpunit/phpunit": "~3.7",
+                "phpunit/phpunit-mock-objects": "~1.2",
+                "satooshi/php-coveralls": "~0.6.1",
                 "symfony/validator": "~2.2",
-                "symfony/yaml": "~2.2"
+                "symfony/yaml": "~2.2",
+                "twig/twig": "~1"
             },
             "suggest": {
                 "doctrine/orm": "The Doctrine ORM integration is optional in the bundle.",
@@ -394,7 +400,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2.x-dev"
+                    "dev-master": "1.3.x-dev"
                 }
             },
             "autoload": {
@@ -420,6 +426,10 @@
                 {
                     "name": "Benjamin Eberlei",
                     "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Doctrine Project",
+                    "homepage": "http://www.doctrine-project.org/"
                 }
             ],
             "description": "Symfony DoctrineBundle",
@@ -430,7 +440,91 @@
                 "orm",
                 "persistence"
             ],
-            "time": "2013-03-25 20:13:59"
+            "time": "2014-03-04 21:50:51"
+        },
+        {
+            "name": "doctrine/doctrine-cache-bundle",
+            "version": "dev-master",
+            "target-dir": "Doctrine/Bundle/DoctrineCacheBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/DoctrineCacheBundle.git",
+                "reference": "49a9d2d9a35863201e5e608d1194db28946c4552"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/DoctrineCacheBundle/zipball/49a9d2d9a35863201e5e608d1194db28946c4552",
+                "reference": "49a9d2d9a35863201e5e608d1194db28946c4552",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/cache": "~1.3",
+                "doctrine/inflector": "~1.0",
+                "php": ">=5.3.2",
+                "symfony/doctrine-bridge": "~2.2",
+                "symfony/framework-bundle": "~2.2",
+                "symfony/security": "~2.2"
+            },
+            "require-dev": {
+                "instaclick/coding-standard": "~1.1",
+                "instaclick/object-calisthenics-sniffs": "dev-master",
+                "instaclick/symfony2-coding-standard": "dev-remaster",
+                "phpunit/phpunit": "~3.7",
+                "satooshi/php-coveralls": "~0.6.1",
+                "squizlabs/php_codesniffer": "dev-master",
+                "symfony/validator": "~2.2",
+                "symfony/yaml": "~2.2"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Doctrine\\Bundle\\DoctrineCacheBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Fabio B. Silva",
+                    "email": "fabio.bat.silva@gmail.com"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@hotmail.com"
+                },
+                {
+                    "name": "Doctrine Project",
+                    "homepage": "http://www.doctrine-project.org/"
+                }
+            ],
+            "description": "Symfony2 Bundle for Doctrine Cache",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "cache",
+                "caching"
+            ],
+            "time": "2014-03-04 19:18:55"
         },
         {
             "name": "doctrine/inflector",
@@ -766,6 +860,76 @@
                 "panel"
             ],
             "time": "2014-03-06 09:42:36"
+        },
+        {
+            "name": "fsi/admin-gallery-bundle",
+            "version": "dev-master",
+            "target-dir": "FSi/Bundle/AdminGalleryBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fsi-open/admin-gallery-bundle.git",
+                "reference": "dd457339768d9605a31db47b797bf129b62367c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fsi-open/admin-gallery-bundle/zipball/dd457339768d9605a31db47b797bf129b62367c4",
+                "reference": "dd457339768d9605a31db47b797bf129b62367c4",
+                "shasum": ""
+            },
+            "require": {
+                "fsi/admin-bundle": "1.0.*",
+                "fsi/form-extensions-bundle": "1.0.*",
+                "fsi/gallery-bundle": "dev-master",
+                "liip/imagine-bundle": "dev-master",
+                "php": ">=5.3.3",
+                "symfony/framework-bundle": "~2.3",
+                "symfony/twig-bundle": "~2.3"
+            },
+            "require-dev": {
+                "behat/behat": "2.4.*@stable",
+                "behat/mink-browserkit-driver": "*",
+                "behat/mink-extension": "*",
+                "behat/mink-selenium2-driver": "*",
+                "behat/symfony2-extension": "*@stable",
+                "bossa/phpspec2-expect": "dev-master",
+                "doctrine/doctrine-bundle": "dev-master",
+                "doctrine/doctrine-cache-bundle": "dev-master",
+                "doctrine/orm": "~2.3",
+                "fzaninotto/faker": "v1.3.0",
+                "phpspec/phpspec": "2.0.*@dev",
+                "sensiolabs/behat-page-object-extension": "1.0.*@dev"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "FSi\\Bundle\\AdminGalleryBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Norbert Orzechowicz",
+                    "email": "norbert@orzechowicz.pl"
+                }
+            ],
+            "description": "FSiAdminBundle configuration for fsi/gallery-bundle",
+            "keywords": [
+                "Symfony2",
+                "admin",
+                "bundle",
+                "fsi",
+                "gallery",
+                "photo"
+            ],
+            "time": "2014-03-11 06:52:12"
         },
         {
             "name": "fsi/admin-security-bundle",
@@ -1127,6 +1291,128 @@
             "time": "2014-01-09 15:29:59"
         },
         {
+            "name": "fsi/doctrine-extensions",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fsi-open/doctrine-extensions.git",
+                "reference": "39ccff4438e24dbb43a89bb896791e5bddcfee27"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fsi-open/doctrine-extensions/zipball/39ccff4438e24dbb43a89bb896791e5bddcfee27",
+                "reference": "39ccff4438e24dbb43a89bb896791e5bddcfee27",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "~2.3",
+                "fsi/metadata": "0.9.*",
+                "fsi/property-observer": "0.9.*",
+                "fsi/reflection": "0.9.*",
+                "knplabs/gaufrette": "0.1.*",
+                "php": ">=5.3.0",
+                "symfony/property-access": "~2.2",
+                "symfony/yaml": "~2.2"
+            },
+            "require-dev": {
+                "doctrine/dbal": "~2.3",
+                "doctrine/orm": "~2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "FSi\\DoctrineExtensions": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Norbert Orzechowicz",
+                    "email": "norbert@fsi.pl"
+                },
+                {
+                    "name": "Lukasz Cybula",
+                    "email": "lukasz@fsi.pl"
+                }
+            ],
+            "description": "FSi Behavioral Doctrine Extensions",
+            "keywords": [
+                "doctrine-extensions",
+                "fsi"
+            ],
+            "time": "2014-01-10 13:33:25"
+        },
+        {
+            "name": "fsi/doctrine-extensions-bundle",
+            "version": "v1.0.1",
+            "target-dir": "FSi/Bundle/DoctrineExtensionsBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fsi-open/doctrine-extensions-bundle.git",
+                "reference": "c335a025486389d0499d6dc4ac0eb6bbc7713e1a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fsi-open/doctrine-extensions-bundle/zipball/c335a025486389d0499d6dc4ac0eb6bbc7713e1a",
+                "reference": "c335a025486389d0499d6dc4ac0eb6bbc7713e1a",
+                "shasum": ""
+            },
+            "require": {
+                "fsi/doctrine-extensions": "1.0.*",
+                "knplabs/knp-gaufrette-bundle": "0.1.*",
+                "php": ">=5.3.3",
+                "symfony/form": "~2.2",
+                "symfony/framework-bundle": "~2.2",
+                "symfony/http-foundation": "~2.2",
+                "symfony/twig-bundle": "~2.2",
+                "symfony/validator": "~2.2",
+                "twig/twig": "~1.2"
+            },
+            "require-dev": {
+                "doctrine/orm": "~2.3",
+                "phpspec/phpspec": "2.0.*@dev",
+                "symfony/twig-bridge": "~2.2"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "FSi\\Bundle\\DoctrineExtensionsBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Norbert Orzechowicz",
+                    "email": "norbert@fsi.pl"
+                }
+            ],
+            "description": "FSi Doctrine extensions bundle.",
+            "keywords": [
+                "bundle",
+                "doctrine",
+                "doctrine-extensions",
+                "extensions",
+                "fsi"
+            ],
+            "time": "2013-12-04 09:48:40"
+        },
+        {
             "name": "fsi/form-extensions-bundle",
             "version": "v1.0.2",
             "target-dir": "FSi/Bundle/FormExtensionsBundle",
@@ -1193,6 +1479,167 @@
             "time": "2014-01-02 09:26:36"
         },
         {
+            "name": "fsi/gallery-bundle",
+            "version": "dev-master",
+            "target-dir": "FSi/Bundle/GalleryBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fsi-open/gallery-bundle.git",
+                "reference": "c2bee529f43ef90166fbb4c93bee86f0ef7b7d1f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fsi-open/gallery-bundle/zipball/c2bee529f43ef90166fbb4c93bee86f0ef7b7d1f",
+                "reference": "c2bee529f43ef90166fbb4c93bee86f0ef7b7d1f",
+                "shasum": ""
+            },
+            "require": {
+                "fsi/doctrine-extensions-bundle": "1.0.*",
+                "liip/imagine-bundle": "dev-master",
+                "php": ">=5.3.3",
+                "symfony/framework-bundle": "~2.3",
+                "symfony/twig-bundle": "~2.3",
+                "white-october/pagerfanta-bundle": "1.0.*"
+            },
+            "require-dev": {
+                "behat/behat": "*@stable",
+                "behat/mink-browserkit-driver": "*",
+                "behat/mink-extension": "*",
+                "behat/mink-selenium2-driver": "*",
+                "behat/symfony2-extension": "*@stable",
+                "bossa/phpspec2-expect": "dev-master",
+                "doctrine/doctrine-bundle": "dev-master",
+                "doctrine/doctrine-cache-bundle": "dev-master",
+                "doctrine/orm": "~2.3",
+                "fzaninotto/faker": "v1.3.0",
+                "phpspec/phpspec": "2.0.*@dev",
+                "sensiolabs/behat-page-object-extension": "1.0.*@dev"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "FSi\\Bundle\\GalleryBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Norbert Orzechowicz",
+                    "email": "norbert@orzechowicz.pl"
+                }
+            ],
+            "description": "Provides photo galleries for you Symfony2 application.",
+            "keywords": [
+                "Symfony2",
+                "bundle",
+                "fsi",
+                "gallery",
+                "photo"
+            ],
+            "time": "2014-03-12 13:49:17"
+        },
+        {
+            "name": "fsi/metadata",
+            "version": "0.9.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fsi-open/metadata.git",
+                "reference": "b6062fd0537f1cd29130c8b938c1b8524f8da4a8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fsi-open/metadata/zipball/b6062fd0537f1cd29130c8b938c1b8524f8da4a8",
+                "reference": "b6062fd0537f1cd29130c8b938c1b8524f8da4a8",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "~2.2",
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "FSi\\Component\\Metadata": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Norbert Orzechowicz",
+                    "email": "norbert@fsi.pl"
+                },
+                {
+                    "name": "Lukasz Cybula",
+                    "email": "lukasz@fsi.pl"
+                }
+            ],
+            "description": "FSi Metadata Component is a library that provide some commonly used mechanisms to read configurations for classes from different sources like annotations, yaml or xml.",
+            "keywords": [
+                "annotation",
+                "component",
+                "fsi",
+                "metadata"
+            ],
+            "time": "2013-03-26 13:52:44"
+        },
+        {
+            "name": "fsi/property-observer",
+            "version": "0.9.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fsi-open/property-observer.git",
+                "reference": "48bd8df4ed3fb631a0861a5c87caceef1eedb087"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fsi-open/property-observer/zipball/48bd8df4ed3fb631a0861a5c87caceef1eedb087",
+                "reference": "48bd8df4ed3fb631a0861a5c87caceef1eedb087",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/property-access": "~2.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "FSi\\Component\\PropertyObserver": "lib/",
+                    "FSi\\Component\\PropertyObserver\\Tests": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lukasz Cybula",
+                    "email": "lukasz@fsi.pl"
+                }
+            ],
+            "description": "FSi PropertyObserver component is a simple component which tracks changes in registered object's properties.",
+            "keywords": [
+                "component",
+                "fsi",
+                "property observer"
+            ],
+            "time": "2014-02-21 08:36:37"
+        },
+        {
             "name": "fsi/reflection",
             "version": "0.9.2",
             "source": {
@@ -1233,6 +1680,138 @@
                 "reflection"
             ],
             "time": "2012-10-03 08:02:37"
+        },
+        {
+            "name": "gedmo/doctrine-extensions",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/l3pp4rd/DoctrineExtensions.git",
+                "reference": "59c819b22ec19867d330cc3173c874b7a7ffac3b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/l3pp4rd/DoctrineExtensions/zipball/59c819b22ec19867d330cc3173c874b7a7ffac3b",
+                "reference": "59c819b22ec19867d330cc3173c874b7a7ffac3b",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "~2.2",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "doctrine/common": ">=2.4.0-RC3",
+                "doctrine/dbal": ">=2.4.0-RC1",
+                "doctrine/mongodb": ">=1.0.3",
+                "doctrine/mongodb-odm": ">=1.0.0-BETA9",
+                "doctrine/orm": ">=2.4.0-RC1",
+                "symfony/yaml": "2.3.1"
+            },
+            "suggest": {
+                "doctrine/dbal": ">=2.3.2",
+                "doctrine/mongodb": ">=1.0.1",
+                "doctrine/mongodb-odm": ">=1.0.0-BETA7",
+                "doctrine/orm": ">=2.3.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Gedmo\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Buchmann",
+                    "email": "david@liip.ch"
+                },
+                {
+                    "name": "Gediminas Morkevicius",
+                    "email": "gediminas.morkevicius@gmail.com"
+                },
+                {
+                    "name": "Gustavo Falco",
+                    "email": "comfortablynumb84@gmail.com"
+                }
+            ],
+            "description": "Doctrine2 behavioral extensions",
+            "homepage": "http://gediminasm.org/",
+            "keywords": [
+                "Blameable",
+                "behaviors",
+                "doctrine2",
+                "extensions",
+                "gedmo",
+                "loggable",
+                "nestedset",
+                "sluggable",
+                "sortable",
+                "timestampable",
+                "translatable",
+                "tree",
+                "uploadable"
+            ],
+            "time": "2014-03-18 09:07:39"
+        },
+        {
+            "name": "imagine/imagine",
+            "version": "v0.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/avalanche123/Imagine.git",
+                "reference": "f64ec666baaa800edcbf237db41121a569230709"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/avalanche123/Imagine/zipball/f64ec666baaa800edcbf237db41121a569230709",
+                "reference": "f64ec666baaa800edcbf237db41121a569230709",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "sami/sami": "dev-master"
+            },
+            "suggest": {
+                "ext-gd": "to use the GD implementation",
+                "ext-gmagick": "to use the Gmagick implementation",
+                "ext-imagick": "to use the Imagick implementation"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Imagine": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bulat Shakirzyanov",
+                    "email": "mallluhuct@gmail.com",
+                    "homepage": "http://avalanche123.com"
+                }
+            ],
+            "description": "Image processing for PHP 5.3",
+            "homepage": "http://imagine.readthedocs.org/",
+            "keywords": [
+                "drawing",
+                "graphics",
+                "image manipulation",
+                "image processing"
+            ],
+            "time": "2013-07-10 17:25:36"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -1335,6 +1914,136 @@
                 "sql"
             ],
             "time": "2014-01-12 16:20:24"
+        },
+        {
+            "name": "knplabs/gaufrette",
+            "version": "v0.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/Gaufrette.git",
+                "reference": "3738125aa5e1f3cc430b91085f4578ce5a4383bc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/Gaufrette/zipball/3738125aa5e1f3cc430b91085f4578ce5a4383bc",
+                "reference": "3738125aa5e1f3cc430b91085f4578ce5a4383bc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "amazonwebservices/aws-sdk-for-php": "1.5.*",
+                "doctrine/dbal": ">=2.3",
+                "dropbox-php/dropbox-php": "*",
+                "herzult/php-ssh": "*",
+                "phpspec/phpspec2": "1.0.*",
+                "rackspace/php-cloudfiles": "*"
+            },
+            "suggest": {
+                "amazonwebservices/aws-sdk-for-php": "to use the Amazon S3 adapter",
+                "doctrine/dbal": "to use the Doctrine DBAL adapter",
+                "dropbox-php/dropbox-php": "to use the Dropbox adapter",
+                "ext-apc": "to use the APC adapter",
+                "ext-curl": "*",
+                "ext-mbstring": "*",
+                "ext-mongo": "*",
+                "ext-zip": "to use the Zip adapter",
+                "knplabs/knp-gaufrette-bundle": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Gaufrette": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "The contributors",
+                    "homepage": "http://github.com/knplabs/Gaufrette/contributors"
+                },
+                {
+                    "name": "KnpLabs Team",
+                    "homepage": "http://knplabs.com"
+                }
+            ],
+            "description": "PHP5 library that provides a filesystem abstraction layer",
+            "homepage": "http://knplabs.com",
+            "keywords": [
+                "abstraction",
+                "file",
+                "filesystem",
+                "media"
+            ],
+            "time": "2013-01-25 08:51:55"
+        },
+        {
+            "name": "knplabs/knp-gaufrette-bundle",
+            "version": "v0.1.4",
+            "target-dir": "Knp/Bundle/GaufretteBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/KnpGaufretteBundle.git",
+                "reference": "c6da43595c5c697f16d2a7ae10433c353d523f08"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/KnpGaufretteBundle/zipball/c6da43595c5c697f16d2a7ae10433c353d523f08",
+                "reference": "c6da43595c5c697f16d2a7ae10433c353d523f08",
+                "shasum": ""
+            },
+            "require": {
+                "knplabs/gaufrette": "0.1.4",
+                "symfony/framework-bundle": "2.*"
+            },
+            "require-dev": {
+                "symfony/console": "2.*",
+                "symfony/yaml": "2.*"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Knp\\Bundle\\GaufretteBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Antoine Hérault",
+                    "email": "antoine.herault@gmail.com",
+                    "homepage": "https://github.com/Herzult"
+                },
+                {
+                    "name": "The contributors",
+                    "homepage": "https://github.com/knplabs/KnpGaufretteBundle/contributors"
+                }
+            ],
+            "description": "Allows to easily use the Gaufrette library in a Symfony project",
+            "homepage": "http://knplabs.com",
+            "keywords": [
+                "abstraction",
+                "file",
+                "filesystem",
+                "media"
+            ],
+            "time": "2013-01-30 11:41:55"
         },
         {
             "name": "knplabs/knp-menu",
@@ -1521,6 +2230,76 @@
             "time": "2013-07-19 00:03:27"
         },
         {
+            "name": "liip/imagine-bundle",
+            "version": "dev-master",
+            "target-dir": "Liip/ImagineBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/liip/LiipImagineBundle.git",
+                "reference": "694e2999ef50c6d3313365f733d949cef6952585"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/liip/LiipImagineBundle/zipball/694e2999ef50c6d3313365f733d949cef6952585",
+                "reference": "694e2999ef50c6d3313365f733d949cef6952585",
+                "shasum": ""
+            },
+            "require": {
+                "imagine/imagine": "0.5.*",
+                "php": ">=5.3.2",
+                "symfony/filesystem": "~2.3",
+                "symfony/finder": "~2.3",
+                "symfony/framework-bundle": "~2.3",
+                "symfony/options-resolver": "~2.3"
+            },
+            "require-dev": {
+                "amazonwebservices/aws-sdk-for-php": "~1.0",
+                "aws/aws-sdk-php": "~2.4",
+                "doctrine/cache": "~1.1",
+                "ext-gd": "*",
+                "phpunit/phpunit": "~3.7",
+                "psr/log": "~1.0",
+                "symfony/browser-kit": "~2.3",
+                "symfony/yaml": "~2.3",
+                "twig/twig": "~1.0"
+            },
+            "suggest": {
+                "amazonwebservices/aws-sdk-for-php": "Add it if you'd like to use aws v1 resolver",
+                "aws/aws-sdk-php": "Add it if you'd like to use aws v2 resolver",
+                "monolog/monolog": "If you'd want to write logs",
+                "twig/twig": "If you'd want to use some handy twig filters"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev",
+                    "dev-0.x": "0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Liip\\ImagineBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Liip and other contributors",
+                    "homepage": "https://github.com/liip/LiipImagineBundle/contributors"
+                }
+            ],
+            "description": "This Bundle assists in imagine manipulation using the imagine library",
+            "homepage": "http://liip.ch",
+            "keywords": [
+                "image",
+                "imagine"
+            ],
+            "time": "2014-03-16 17:36:57"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.7.0",
             "source": {
@@ -1586,6 +2365,68 @@
                 "psr-3"
             ],
             "time": "2013-11-14 19:48:31"
+        },
+        {
+            "name": "pagerfanta/pagerfanta",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/whiteoctober/Pagerfanta.git",
+                "reference": "9568187b789a39a3933c71e4e28b60fc2c26b70d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/whiteoctober/Pagerfanta/zipball/9568187b789a39a3933c71e4e28b60fc2c26b70d",
+                "reference": "9568187b789a39a3933c71e4e28b60fc2c26b70d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "doctrine/mongodb-odm": "*",
+                "doctrine/orm": "2.*",
+                "mandango/mandango": "*",
+                "propel/propel1": "~1.6",
+                "solarium/solarium": "dev-develop"
+            },
+            "suggest": {
+                "doctrine/mongodb-odm": "To use the DoctrineODMMongoDBAdapter.",
+                "doctrine/orm": "To use the DoctrineORMAdapter.",
+                "mandango/mandango": "To use the MandangoAdapter.",
+                "propel/propel1": "To use the PropelAdapter",
+                "solarium/solarium": "To use the SolariumAdapter."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Pagerfanta\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pablo Díez",
+                    "email": "pablodip@gmail.com",
+                    "homepage": "http://github.com/pablodip"
+                }
+            ],
+            "description": "Pagination for PHP 5.3",
+            "keywords": [
+                "page",
+                "pagination",
+                "paginator",
+                "paging"
+            ],
+            "time": "2013-09-23 08:06:55"
         },
         {
             "name": "psr/log",
@@ -2273,6 +3114,60 @@
                 "templating"
             ],
             "time": "2014-02-13 10:19:29"
+        },
+        {
+            "name": "white-october/pagerfanta-bundle",
+            "version": "v1.0.2",
+            "target-dir": "WhiteOctober/PagerfantaBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/whiteoctober/WhiteOctoberPagerfantaBundle.git",
+                "reference": "10403c1db34983f81d8c106cd1c47f3139641455"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/whiteoctober/WhiteOctoberPagerfantaBundle/zipball/10403c1db34983f81d8c106cd1c47f3139641455",
+                "reference": "10403c1db34983f81d8c106cd1c47f3139641455",
+                "shasum": ""
+            },
+            "require": {
+                "pagerfanta/pagerfanta": "1.0.*",
+                "symfony/framework-bundle": "~2.2",
+                "symfony/property-access": "~2.2",
+                "symfony/twig-bundle": "~2.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7",
+                "symfony/symfony": "~2.2"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "WhiteOctober\\PagerfantaBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pablo Díez",
+                    "email": "pablodip@gmail.com",
+                    "homepage": "http://github.com/pablodip"
+                }
+            ],
+            "description": "Bundle to use Pagerfanta with Symfony2",
+            "keywords": [
+                "page",
+                "paging"
+            ],
+            "time": "2014-01-07 13:33:53"
         }
     ],
     "packages-dev": [
@@ -2283,7 +3178,13 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "fsi/admin-security-bundle": 20
+        "doctrine/doctrine-bundle": 20,
+        "fsi/admin-security-bundle": 20,
+        "fsi/gallery-bundle": 20,
+        "fsi/admin-gallery-bundle": 20,
+        "liip/imagine-bundle": 20,
+        "doctrine/doctrine-cache-bundle": 20,
+        "gedmo/doctrine-extensions": 20
     },
     "platform": {
         "php": ">=5.3.3"

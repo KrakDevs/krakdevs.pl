@@ -9,3 +9,9 @@ services:
     factory_method: getRepository
     arguments:
       - %krak_devs_web.entity.event.class%
+  gedmo.listener.sluggable:
+    class: Gedmo\Sluggable\SluggableListener
+    tags:
+      - { name: doctrine.event_subscriber, connection: default }
+    calls:
+      - [ setAnnotationReader, [ @annotation_reader ] ]

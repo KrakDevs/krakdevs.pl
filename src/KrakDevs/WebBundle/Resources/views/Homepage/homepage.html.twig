@@ -46,6 +46,7 @@
                 <h3 class="media-heading">{{ event.title }}</h3>
                 <div>{{ event.date|date("Y-m-d H:i:s") }}</div>
                 <div>{{ 'homepage.event.event_master'|trans }} {{ event.eventMaster.username }}</div>
+                <div><a href="{{ path('krakdevs_event', {'slug': event.slug}) }}">{{ 'homepage.event.read_more'|trans }}</a></div>
             </div>
         {% endfor %}
     </div>
