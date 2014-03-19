@@ -15,3 +15,5 @@ parameters:
     secret:            ThisTokenIsNotSoSecretChangeIt
 
     google_analytics_code: EDIT_ME
+
+    disqus_shortname: disqus_shortname

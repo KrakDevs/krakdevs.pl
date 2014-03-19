@@ -31,6 +31,7 @@ twig:
     strict_variables: "%kernel.debug%"
     globals:
         google_analytics_code: %google_analytics_code%
+        disqus_shortname: %disqus_shortname%
     form:
         resources:
             - ":Form:form_twitter_bootstrap_3.1.x_layout.html.twig"
