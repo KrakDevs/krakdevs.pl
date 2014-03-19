@@ -12,6 +12,9 @@ security:
   logout: Wyloguj
   change_password: Zmień hasło
   login: Logowanie
+  connect:
+    info: Możesz także zalogować się przy użyciu następujących usług
+    github: Github
 
 user:
   registration:
@@ -19,3 +22,9 @@ user:
   profile:
     show: Twój profil
     edit: Edytuj swoje dane
+
+profile:
+  show:
+    github:
+      connect: Connect Github account
+      id: Github ID

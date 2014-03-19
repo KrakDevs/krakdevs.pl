@@ -1,0 +1,11 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+<div class="row">
+    <div class="col-lg-offset-3 col-lg-6">
+        <div class="alert alert-success">
+            {{ 'header.success' | trans({'%name%': userInformation.realName}, 'HWIOAuthBundle') }}
+        </div>
+    </div>
+</div>
+{% endblock %}

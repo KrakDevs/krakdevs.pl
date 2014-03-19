@@ -27,6 +27,10 @@
             <input class="btn btn-primary" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}" />
             <a class="btn btn-warning" href="{{ url('fos_user_resetting_request') }}">{{ 'security.password.reset'|trans }}</a>
         </form>
+        <hr />
+        <div>{{ 'security.connect.info'|trans }}</div>
+        <br/>
+        <a class="btn btn-default" href="{{ path('hwi_oauth_service_redirect', {'service': 'github' }) }}" ><i class="fa fa-github-alt"></i> {{ 'security.connect.github'|trans }}</a>
     </div>
 </div>
 {% endblock body %}

@@ -24,6 +24,18 @@ class User extends BaseUser
      */
     protected $hostedEvents;
 
+    /**
+     * @var string
+     * @ORM\Column(type="string", nullable=true)
+     */
+    protected $githubId;
+
+    /**
+     * @var string
+     * @ORM\Column(type="string", nullable=true)
+     */
+    protected $githubAccessToken;
+
     public function __construct()
     {
         parent::__construct();
@@ -36,5 +48,37 @@ class User extends BaseUser
     public function __toString()
     {
         return sprintf("%s (%s)", $this->username, $this->email);
+    }
+
+    /**
+     * @param string $githubId
+     */
+    public function setGithubId($githubId)
+    {
+        $this->githubId = $githubId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getGithubId()
+    {
+        return $this->githubId;
+    }
+
+    /**
+     * @param mixed $githubAccessToken
+     */
+    public function setGithubAccessToken($githubAccessToken)
+    {
+        $this->githubAccessToken = $githubAccessToken;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getGithubAccessToken()
+    {
+        return $this->githubAccessToken;
     }
 }

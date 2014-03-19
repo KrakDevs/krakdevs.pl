@@ -17,3 +17,6 @@ parameters:
     google_analytics_code: EDIT_ME
 
     disqus_shortname: disqus_shortname
+
+    github_client_id: EDIT_ME
+    github_client_secret: EDIT_ME

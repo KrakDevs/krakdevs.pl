@@ -28,3 +28,18 @@ admin:
 admin_security:
       resource: "@FSiAdminSecurityBundle/Resources/config/routing/admin_security.yml"
       prefix: /admin
+
+hwi_oauth_security:
+    resource: "@HWIOAuthBundle/Resources/config/routing/login.xml"
+    prefix: /login
+
+hwi_oauth_connect:
+    resource: "@HWIOAuthBundle/Resources/config/routing/connect.xml"
+    prefix: /login
+
+hwi_oauth_redirect:
+    resource: "@HWIOAuthBundle/Resources/config/routing/redirect.xml"
+    prefix: /login
+
+github_login:
+    pattern: /login/check-github

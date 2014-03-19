@@ -1,0 +1,14 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+<div class="row">
+    <div class="col-lg-offset-3 col-lg-6">
+    {% if error is defined and error %}
+        <span>{{ error }}</span>
+    {% endif %}
+    {% for owner in hwi_oauth_resource_owners() %}
+    <a class="btn btn-default" href="{{ hwi_oauth_login_url(owner) }}">{{ owner | trans({}, 'HWIOAuthBundle') }}</a> <br />
+    {% endfor %}
+    </div>
+</div>
+{% endblock %}

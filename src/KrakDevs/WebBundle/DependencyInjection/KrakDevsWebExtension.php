@@ -23,5 +23,6 @@ class KrakDevsWebExtension extends Extension
         $loader->load('controllers.yml');
         $loader->load('admin.yml');
         $loader->load('doctrine.yml');
+        $loader->load('security.yml');
     }
 }
