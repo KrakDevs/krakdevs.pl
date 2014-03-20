@@ -38,3 +38,5 @@ hwi_oauth:
             client_id:     %github_client_id%
             client_secret: %github_client_secret%
             scope: ~
+    http_client:
+        timeout: 30
