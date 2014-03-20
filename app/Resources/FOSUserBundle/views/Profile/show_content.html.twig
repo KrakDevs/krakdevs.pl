@@ -2,7 +2,7 @@
     <p>{{ 'profile.show.username'|trans({}, 'FOSUserBundle') }}: {{ user.username }}</p>
     <p>{{ 'profile.show.email'|trans({}, 'FOSUserBundle') }}: {{ user.email }}</p>
     {% if user.githubId is null %}
-    <p><a class="btn btn-default" href="{{ path('hwi_oauth_connect_service', {'service': 'github' }) }}" >{{ 'profile.show.github.connect'|trans }}</a></p>
+    <p><a class="btn btn-default" href="{{ path('hwi_oauth_service_redirect', {'service': 'github' }) }}" >{{ 'profile.show.github.connect'|trans }}</a></p>
     {% else %}
     <p>{{ 'profile.show.github.id'|trans }}: {{ user.githubId }}</p>
     {% endif %}
