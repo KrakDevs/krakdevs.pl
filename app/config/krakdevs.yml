@@ -24,3 +24,17 @@ stof_doctrine_extensions:
     orm:
         default:
             sluggable: true
+
+hwi_oauth:
+    firewall_name: secured_area
+    fosub:
+        properties:
+          github: githubId
+    connect:
+        account_connector: krakdevs_web.user.provider
+    resource_owners:
+        github:
+            type:          github
+            client_id:     %github_client_id%
+            client_secret: %github_client_secret%
+            scope: ~

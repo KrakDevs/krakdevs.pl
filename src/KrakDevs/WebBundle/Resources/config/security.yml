@@ -1,0 +1,7 @@
+parameters:
+    krakdevs_web.user.provider.class: KrakDevs\WebBundle\Security\Core\User\FOSUBUserProvider
+
+services:
+    krakdevs_web.user.provider:
+        class: "%krakdevs_web.user.provider.class%"
+        arguments: [@fos_user.user_manager, {github: githubId }]
