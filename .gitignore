@@ -16,3 +16,9 @@
 /bin/
 /composer.phar
 /vagrant/.vagrant
+
+/web/assets/compiled
+/node_modules
+/web/assets/vendor
+/web/assets/css
+!web/assets/css/README.txt

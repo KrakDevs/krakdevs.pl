@@ -12,7 +12,7 @@
         <h2>{{ 'homepage.sponsors'|trans }}</h2>
         <div class="sponsors">
             <div class="sponsor">
-            <a href="http://www.jetbrains.com/"><img class="jetbrains" src="{{ asset('images/logo_JB_tagline.png') }}" alt="JetBrains" /></a>
+            <a href="http://www.jetbrains.com/"><img class="jetbrains" src="{{ asset(assetsPath~'/img/logo_JB_tagline.png') }}" alt="JetBrains" /></a>
             </div>
         </div>
     </div>
@@ -55,9 +55,5 @@
 
 {% block stylesheets %}
 {{ parent() }}
-{% stylesheets
-'css/homepage.css'
-filter='cssrewrite' output='css/compiled/homepage.css' %}
-<link rel="stylesheet" href="{{ asset_url }}" />
-{% endstylesheets %}
+<link rel="stylesheet" href="{{ asset(assetsPath~'/css/homepage.css') }}" />
 {% endblock %}

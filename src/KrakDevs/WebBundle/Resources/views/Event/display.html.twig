@@ -57,23 +57,10 @@
 {% endblock %}
 
 {% block stylesheets %}
-    {{ parent() }}
-    {% stylesheets
-    'css/homepage.css'
-    'css/jcarousel.responsive.css'
-    'css/lightbox.css'
-    filter='cssrewrite' output='css/compiled/event_display.css' %}
-    <link rel="stylesheet" href="{{ asset_url }}" />
-    {% endstylesheets %}
+{{ parent() }}
+<link rel="stylesheet" href="{{ asset(assetsPath~'/css/event.css') }}" />
 {% endblock %}
 
-{% block javascripts %}
-    {{ parent() }}
-    {% javascripts
-    'js/script.js'
-    'js/lightbox-2.6.min.js'
-    'js/jquery.jcarousel.min.js'
-    output="js/compiled/event_display.js" %}
-    <script type="text/javascript" src="{{ asset_url }}"></script>
-    {% endjavascripts %}
+{% block requirejs %}
+require(['app/gallery']);
 {% endblock %}

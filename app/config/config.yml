@@ -3,6 +3,9 @@ imports:
     - { resource: security.yml }
     - { resource: krakdevs.yml }
 
+parameters:
+  assets_directory: 'assets'
+
 framework:
     #esi:             ~
     translator:      { fallback: "%locale%" }
@@ -32,6 +35,7 @@ twig:
     globals:
         google_analytics_code: %google_analytics_code%
         disqus_shortname: %disqus_shortname%
+        assetsPath: %assets_directory%
     form:
         resources:
             - ":Form:form_twitter_bootstrap_3.1.x_layout.html.twig"

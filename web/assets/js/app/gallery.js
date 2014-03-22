@@ -1,5 +1,5 @@
-(function($) {
-    $(function() {
+define(['jquery', 'domReady', 'lightbox2', 'jcarousel'], function($, domReady){
+    domReady(function() {
         var jcarousel = $('.jcarousel');
 
         jcarousel
@@ -45,4 +45,4 @@
                 }
             });
     });
-})(jQuery);
+});
