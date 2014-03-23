@@ -75,8 +75,8 @@ module.exports = function (grunt) {
                 },
                 files: {
                     "<%= builtDir %>/css/layout.css": "<%= appDir %>/less/layout.less",
-                    "<%= appDir %>/css/homepage.css": "<%= appDir %>/less/homepage.less",
-                    "<%= appDir %>/css/event.css": "<%= appDir %>/less/event.less"
+                    "<%= builtDir %>/css/homepage.css": "<%= appDir %>/less/homepage.less",
+                    "<%= builtDir %>/css/event.css": "<%= appDir %>/less/event.less"
                 }
             }
         },
