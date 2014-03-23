@@ -37,5 +37,5 @@ $ grunt
 To open application in "production" env you should runt following command in virtual machine
 
 ```
-$ grun production
+$ grunt production
 ```
