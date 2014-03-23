@@ -1,0 +1,16 @@
+---
+- name: Add repository with latest node.js version
+  apt_repository: repo='ppa:chris-lea/node.js'
+
+- name: Update apt
+  apt: update_cache=yes
+
+- name: Install node.js
+  apt: name=nodejs state=latest
+
+- name: Install common modules
+  npm: name={{ item }} global=yes state=latest
+  with_items:
+    - bower
+    - less
+    - grunt-cli

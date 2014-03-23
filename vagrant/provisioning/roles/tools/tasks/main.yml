@@ -10,3 +10,4 @@
     - curl
     - mc
     - acl
+    - python-software-properties

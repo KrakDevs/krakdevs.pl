@@ -1,0 +1,23 @@
+{
+  "name": "krakdevs",
+  "version": "0.0.1",
+  "homepage": "https://github.com/KrakDevs/krakdevs.pl",
+  "description": "KrakDevs group homepage",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.1.*",
+    "jquery": "<2.0.0",
+    "requirejs": "~2.1.11",
+    "jcarousel": "~0.3.0",
+    "requirejs-domready": "~2.0.1",
+    "lightbox2": "*"
+  },
+  "directory": "web/assets/vendor"
+}
